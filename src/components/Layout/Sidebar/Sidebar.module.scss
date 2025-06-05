@@ -1,0 +1,22 @@
+.sidebar {
+	flex: 30%;
+	background-color: var(--dark-gray-4);
+	padding: 20px;
+}
+
+.toc,
+.toc ol {
+	list-style-type: none;
+}
+
+.toc {
+	padding: 0;
+}
+
+.toc li a.active span {
+	font-weight: 900;
+}
+
+.toc ol {
+	padding-inline-start: 2ch;
+}

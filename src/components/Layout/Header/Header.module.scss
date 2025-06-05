@@ -1,0 +1,21 @@
+.header {
+	display: block;
+	flex: 0 1 auto;
+
+	padding: 80px;
+	text-align: center;
+	background: hsl(168, 76%, 42%);
+	background-image: url('../../../assets/images/kronorium.png');
+	background-repeat: no-repeat;
+	background-size: 120%;
+	background-position: center;
+}
+
+.header h1 {
+	text-transform: uppercase;
+	font-size: 40px;
+}
+
+.header p {
+	font-weight: bold;
+}
