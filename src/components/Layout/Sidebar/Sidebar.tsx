@@ -33,6 +33,9 @@ const Sidebar: FC = () => {
 					<li>
 						<Link to={Path.BO6}>Black Ops 6</Link>
 						<ol>
+                            <li>
+                                <Link to={Path.BO6_AUGMENTS}>Best Augments</Link>
+                            </li>
 							<li>
 								<Link to={Path.BO6_TERMINUS}>Terminus</Link>
 								<ol>

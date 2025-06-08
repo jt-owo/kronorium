@@ -27,19 +27,19 @@ const Bingo: FC = () => {
 			let index = copy.indexOf(item);
 			if (index !== -1) copy.splice(index, 1);
 			cardList.push({
-                challenge: item,
-                checked: false
-            });
+				challenge: item,
+				checked: false
+			});
 		}
 
 		setCards(cardList);
 	};
 
 	const check = (index: number) => {
-        const copy = [...cards];
-        copy[index].checked = !copy[index].checked;
-        setCards(copy);
-        
+		const copy = [...cards];
+		copy[index].checked = !copy[index].checked;
+		setCards(copy);
+
 		const count = document.getElementsByClassName(styles.checked);
 		setChecked(count.length);
 	};
