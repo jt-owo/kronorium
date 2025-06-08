@@ -6,8 +6,13 @@ import entries from './mwz_bingo.json';
 
 import styles from './Bingo.module.scss';
 
+type BingoCard = {
+	challenge: string;
+	checked: boolean;
+};
+
 const Bingo: FC = () => {
-	const [cards, setCards] = useState<string[]>([]);
+	const [cards, setCards] = useState<BingoCard[]>([]);
 	const [checked, setChecked] = useState(0);
 
 	const generate = () => {
@@ -16,25 +21,25 @@ const Bingo: FC = () => {
 			copy.push(...list);
 		});
 
-		let cardList = [];
-		for (let i = 0; i < 25; i++) {
+		let cardList: BingoCard[] = [];
+		for (let i = 0; i < Math.pow(5, 2); i++) {
 			const item = copy[Math.floor(Math.random() * copy.length)];
 			let index = copy.indexOf(item);
 			if (index !== -1) copy.splice(index, 1);
-			cardList.push(item);
+			cardList.push({
+                challenge: item,
+                checked: false
+            });
 		}
 
 		setCards(cardList);
 	};
 
-	const check = (e: React.MouseEvent) => {
-		const element = e.currentTarget as HTMLDivElement;
-		if (element.classList.contains(styles.checked)) {
-			element.classList.remove(styles.checked);
-		} else {
-			element.classList.add(styles.checked);
-		}
-
+	const check = (index: number) => {
+        const copy = [...cards];
+        copy[index].checked = !copy[index].checked;
+        setCards(copy);
+        
 		const count = document.getElementsByClassName(styles.checked);
 		setChecked(count.length);
 	};
@@ -44,7 +49,7 @@ const Bingo: FC = () => {
 	return (
 		<View title="MWZ Bingo (Prototype)">
 			<p>
-				<button onClick={() => window.location.reload()}>Generate</button>
+				<button onClick={() => generate()}>Generate</button>
 			</p>
 			<p>
 				<span>
@@ -57,8 +62,8 @@ const Bingo: FC = () => {
 				{cards &&
 					cards.map((c, i) => {
 						return (
-							<div key={`card${i}`} onClick={check}>
-								<span>{c}</span>
+							<div key={`card${i}`} className={c.checked ? styles.checked : ''} onClick={() => check(i)}>
+								<span>{c.challenge}</span>
 							</div>
 						);
 					})}
