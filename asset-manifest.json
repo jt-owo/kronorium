@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kronorium/static/css/main.2a23eb01.css",
-    "main.js": "/kronorium/static/js/main.625fb9ab.js",
+    "main.css": "/kronorium/static/css/main.399db758.css",
+    "main.js": "/kronorium/static/js/main.73230e28.js",
     "static/js/453.20557e20.chunk.js": "/kronorium/static/js/453.20557e20.chunk.js",
     "static/media/kronorium.png": "/kronorium/static/media/kronorium.e289ab31678094657b29.png",
     "index.html": "/kronorium/index.html",
-    "main.2a23eb01.css.map": "/kronorium/static/css/main.2a23eb01.css.map",
-    "main.625fb9ab.js.map": "/kronorium/static/js/main.625fb9ab.js.map",
+    "main.399db758.css.map": "/kronorium/static/css/main.399db758.css.map",
+    "main.73230e28.js.map": "/kronorium/static/js/main.73230e28.js.map",
     "453.20557e20.chunk.js.map": "/kronorium/static/js/453.20557e20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a23eb01.css",
-    "static/js/main.625fb9ab.js"
+    "static/css/main.399db758.css",
+    "static/js/main.73230e28.js"
   ]
 }
