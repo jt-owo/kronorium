@@ -1,5 +1,9 @@
 @import './assets/styles/colors.scss';
 
+:target {
+	border: 2px solid darkorange;
+}
+
 html,
 body,
 #root,
@@ -14,7 +18,15 @@ body,
 * {
 	box-sizing: border-box;
 	color: $font-light;
-	font-family: 'Verdana', 'Arial', 'Helvetica';
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: underline;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 input {

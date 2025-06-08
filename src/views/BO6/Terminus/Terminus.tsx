@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import View from '../../../components/Layout/View/View';
-import Entry from '../../../components/Layout/View/Entry/Entry';
+import Guide from '../../../components/Layout/View/Guide/Guide';
 
 const Terminus: FC = () => {
 	const [x, setX] = useState(0);
@@ -21,7 +21,7 @@ const Terminus: FC = () => {
 
 	return (
 		<View title="Black Ops 6: Terminus">
-			<Entry title="DR-11 Beamsmasher Calculator">
+			<Guide id='calculator' title="DR-11 Beamsmasher Calculator">
 				<label htmlFor="x">
 					x:
 					<input type="text" name="x" value={x} onChange={(e) => setX(+e.target.value)} />
@@ -52,7 +52,7 @@ const Terminus: FC = () => {
 				<br />
 				<br />
 				<span>c: {c}</span>
-			</Entry>
+			</Guide>
 		</View>
 	);
 };

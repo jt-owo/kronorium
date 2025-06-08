@@ -1,22 +1,37 @@
-.sidebar {
-	flex: 30%;
-	background-color: var(--dark-gray-4);
-	padding: 20px;
-}
+@import '../../../assets/styles/colors.scss';
 
-.toc,
-.toc ol {
-	list-style-type: none;
+.sidebar {
+	flex: 20%;
+	background-color: $dark-gray-1;
+	padding: 20px;
 }
 
 .toc {
 	padding: 0;
-}
+	user-select: none;
+	-moz-user-select: none;
 
-.toc li a.active span {
-	font-weight: 900;
-}
+	&,
+	ol {
+		list-style-type: none;
+	}
 
-.toc ol {
-	padding-inline-start: 2ch;
+	ol {
+		padding-inline: 2ch;
+	}
+
+	li {
+		a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+			&.active {
+                text-decoration: underline;
+				font-weight: 900;
+			}
+		}
+	}
 }

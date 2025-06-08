@@ -1,21 +1,22 @@
 import { FC, ReactNode } from 'react';
 
-type EntryProps = {
+type GuideProps = {
+    id: string;
 	title: string;
 	children: ReactNode;
 	desc?: string;
 };
 
-const Entry: FC<EntryProps> = (props) => {
-	const { title, desc, children } = props;
+const Guide: FC<GuideProps> = (props) => {
+	const { id, title, desc, children } = props;
 
 	return (
 		<div>
-			<h2>{title}</h2>
+			<h2 id={id}>{title}</h2>
 			{desc && <h5>{desc}</h5>}
 			{children}
 		</div>
 	);
 };
 
-export default Entry;
+export default Guide;
