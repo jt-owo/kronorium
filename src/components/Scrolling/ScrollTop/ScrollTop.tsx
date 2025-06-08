@@ -1,14 +1,15 @@
 import { FC, useEffect, useState } from 'react';
 
-import styles from './GoTop.module.scss';
+import styles from './ScrollTop.module.scss';
+import { useLocation } from 'react-router-dom';
 
-type GoTopProps = {
-	visible?: boolean;
+type ScrollTopProps = {
     scrollTop: () => void;
 };
 
-const GoTop: FC<GoTopProps> = ({ scrollTop }) => {
+const ScrollTop: FC<ScrollTopProps> = ({ scrollTop }) => {
 	const [isVisible, setVisibility] = useState(false);
+    const location = useLocation();
 
 	const handleVisiblity = () => {
 		const scrollPosition = window.pageYOffset;
@@ -27,8 +28,9 @@ const GoTop: FC<GoTopProps> = ({ scrollTop }) => {
 		};
 	}, []);
 
-	let className = `${styles.goTop}`;
-	if (isVisible) className += ` ${styles.active}`;
+	let className = `${styles.scrollTop}`;
+    // FIXME: Hacky workaround.
+	if (isVisible && !location.pathname.includes('bingo')) className += ` ${styles.active}`;
 
 	return (
 		<button className={className} onClick={scrollTop}>
@@ -37,4 +39,4 @@ const GoTop: FC<GoTopProps> = ({ scrollTop }) => {
 	);
 };
 
-export default GoTop;
+export default ScrollTop;

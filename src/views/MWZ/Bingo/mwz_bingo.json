@@ -1,0 +1,99 @@
+{
+    "entries": [
+        [
+            "Juggernog",
+            "Quick Revive",
+            "Deadshot Daiquiri",
+            "Elemental Pop",
+            "Tombstone Soda",
+            "Speed Cola",
+            "Stamin-Up",
+            "PHD Flopper",
+            "Death Perception"
+        ],
+        [
+            "Mortar Strike",
+            "Sentry Turret",
+            "Juggernaut"
+        ],
+        [
+            "Proximity Mine",
+            "Sticky Grenade",
+            "Molotov Cocktail",
+            "Breacher Drone",
+            "Frag Grenade",
+            "Claymore",
+            "Throwing Knife",
+            "Thermite",
+            "Drill Charge",
+            "C4"
+        ],
+        [
+            "Stun Grenade",
+            "Smoke Grenade",
+            "Scatter Mine",
+            "Decoy Grenade",
+            "Shockstick",
+            "Stim",
+            "Snapshot Grenade",
+            "Experimental Gas"
+        ],
+        [
+            "Raw Aetherium Crystal",
+            "Refined Aetherium Crystal",
+            "Flawless Aetherium Crystal"
+        ],
+        [
+            "Rare Aether Tool",
+            "Epic Aether Tool"
+        ],
+        [
+            "Brain Rot",
+            "Cryo Freeze",
+            "Napalm Burst",
+            "Dead Wire",
+            "Shatter Blast"
+        ],
+        [
+            "Max Ammo",
+            "Double Points",
+            "Full Power",
+            "Insta-Kill"
+        ],
+        [
+            "Photo of a Dog",
+            "Comic Book",
+            "First Edition Comic Book",
+            "Gold Skull",
+            "Aspirin",
+            "Gas Mask",
+            "Medium Rucksack",
+            "Large Rucksack",
+            "Self-Revive",
+            "3-Plate Vest"
+        ],
+        [
+            "Epic Weapon",
+            "Legendary Weapon",
+            "Wonder Weapon"
+        ],
+        [
+            "Clear Mercenary Camp",
+            "Clear Mercenary Stronghold",
+            "Clear Aether Nest",
+            "Clear Infested Stronghold",
+            "Destroy Aetherial Orb"
+        ],
+        [
+            "Outlast Contract",
+            "Aether Extractor Contract",
+            "Bounty Contract",
+            "Raid Weapon Stash Contract",
+            "Cargo Delivery Contract",
+            "Aether Spores Contract"
+        ],
+        [
+            "Summon Hellhound Buddy"
+        ]
+    ]
+}

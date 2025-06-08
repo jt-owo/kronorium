@@ -1,0 +1,11 @@
+#chalkboards {
+    tr th:not(:first-child), tr td:not(:first-child) {
+        text-align: center;
+    }
+
+    tr td {
+        &.checked {
+            text-decoration: underline;
+        }
+    }
+}

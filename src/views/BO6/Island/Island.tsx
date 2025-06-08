@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import View from '../../../components/Layout/View/View';
 import Guide from '../../../components/Layout/View/Guide/Guide';
 
-const Terminus: FC = () => {
+const Island: FC = () => {
 	const [x, setX] = useState(0);
 	const [y, setY] = useState(0);
 	const [z, setZ] = useState(0);
@@ -57,4 +57,4 @@ const Terminus: FC = () => {
 	);
 };
 
-export default Terminus;
+export default Island;

@@ -1,7 +1,7 @@
 import { FC, useRef } from 'react';
 
 import Navigation from '../Navigation/Navigation';
-import GoTop from '../../GoTop/GoTop';
+import ScrollTop from '../../Scrolling/ScrollTop/ScrollTop';
 
 import styles from './Header.module.scss';
 
@@ -21,7 +21,7 @@ const Header: FC = () => {
 				<p>Call of Duty Zombies Resource Hub & Guides</p>
 			</div>
 			<Navigation />
-			<GoTop scrollTop={scrollTop} />
+			<ScrollTop scrollTop={scrollTop} />
 		</div>
 	);
 };

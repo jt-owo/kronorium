@@ -1,52 +1,62 @@
 @import '../../../assets/styles/colors.scss';
+@import '../../../assets/styles/mixins.scss';
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	gap: 0px;
-    width: 750px;
-    user-select: none;
-    -moz-user-select: none;
+	width: 750px;
+	user-select: none;
+	-moz-user-select: none;
 
 	div {
 		width: 175px;
 		height: 175px;
-        font-size: 1.15em;
+		font-size: 1.15em;
 		border: 2px solid $dark-gray-3;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center; 
-        cursor: pointer;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		cursor: pointer;
+		position: relative;
 
-
-        &.checked {
-            ::after, ::before {
-                content: "";
-                display: block;
-                position: relative;
-                top: 50%;
-                right: 10%;
-                margin-top: -8px;
-                width: 200px;
-                transform-origin: 56%;
-                height: 3px;
-                background: #ff0000;
-                border-radius: 1px;
-            }
-
-            ::before {
-                -webkit-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-            }
-
-            ::after {
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-            }
+        &:hover {
+            background-color: $dark-gray-2;
         }
+
+		&.checked {
+
+            span {
+                color: $font-gray;
+            }
+
+			::after,
+			::before {
+                @include center;
+				content: '';
+				display: block;
+				position: absolute;
+                margin-top: -2px;
+                margin-left: -110px;
+				width: 220px;
+				height: 3px;
+				background: #ff0000;
+				border-radius: 1px;
+			}
+
+			::before {
+				-webkit-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+
+			::after {
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		}
 	}
 }

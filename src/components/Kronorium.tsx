@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes, useLocation } from 'react-router-dom';
 
 import Path from '../util/paths';
-import ScrollToAnchor from './ScrollToAnchor/ScrollToAnchor';
+import ScrollToAnchor from './Scrolling/ScrollToAnchor/ScrollToAnchor';
 
 import Container from './Layout/Container/Container';
 import Row from './Layout/Row/Row';
@@ -13,9 +13,9 @@ import Sidebar from './Layout/Sidebar/Sidebar';
 
 import Home from '../views/Home/Home';
 import BO6 from '../views/BO6/BO6';
-import Terminus from '../views/BO6/Terminus/Terminus';
-import CitadelleDesMorts from '../views/BO6/CitadelleDesMorts/CitadelleDesMorts';
-import ShatteredVeil from '../views/BO6/ShatteredVeil/ShatteredVeil';
+import Island from '../views/BO6/Island/Island';
+import Castle from '../views/BO6/CitadelleDesMorts/Castle';
+import Mansion from '../views/BO6/Mansion/Mansion';
 import MWZ from '../views/MWZ/MWZ';
 import Bingo from '../views/MWZ/Bingo/Bingo';
 
@@ -35,11 +35,11 @@ const Kronorium: FC = () => {
 						<Route path={Path.ROOT} element={<Home />} />
 						<Route path={Path.ABOUT} element={<Home />} />
 						<Route path={Path.BO6} element={<BO6 />} />
-						<Route path={Path.BO6_TERMINUS} element={<Terminus />} />
-						<Route path={Path.BO6_CITADELLE} element={<CitadelleDesMorts />} />
-						<Route path={Path.BO6_SHATTERED_VEIL} element={<ShatteredVeil />} />
+						<Route path={Path.BO6_TERMINUS} element={<Island />} />
+						<Route path={Path.BO6_CITADELLE} element={<Castle />} />
+						<Route path={Path.BO6_SHATTERED_VEIL} element={<Mansion />} />
 						<Route path={Path.MWZ} element={<MWZ />} />
-                        <Route path={Path.MWZ_BINGO} element={<Bingo />} />
+						<Route path={Path.MWZ_BINGO} element={<Bingo />} />
 					</Routes>
 				</Row>
 			</HashRouter>

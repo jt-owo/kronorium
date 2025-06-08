@@ -14,7 +14,7 @@ const MWZ: FC = () => {
 	return (
 		<View title="Modern Warfare Zombies">
 			<Guide id={Path.MWZ_LOOT} title="Guaranteed Loot">
-				<table className={styles.table}>
+				<table>
 					<thead>
 						<tr>
 							<th>Item</th>
@@ -107,7 +107,7 @@ const MWZ: FC = () => {
 					</tbody>
 				</table>
 				<br />
-				<table className={styles.table}>
+				<table>
 					<tbody>
 						<tr>
 							<th colSpan={2}>Act 1</th>
@@ -150,7 +150,8 @@ const MWZ: FC = () => {
 					You can find a grave located in
 					<MapLink x={-124.9453125} y={115.828125}>
 						E4
-					</MapLink>.
+					</MapLink>
+					.
 				</p>
 				<p>Interacting with the grave allows you to pay respects.</p>
 				<p>

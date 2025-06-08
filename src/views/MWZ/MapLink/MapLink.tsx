@@ -19,7 +19,7 @@ const MapLink: FC<MapProps> = ({ x, y, children }) => {
 			else return;
 		}
 
-		window.open(`https:wzhub.gg/map/urzikstan/mwz?s=${x}%3B${y}`, '_blank');
+		window.open(`https://www.wzhub.gg/map/urzikstan/mwz?s=${x}%3B${y}`, '_blank', 'noreferrer');
 	};
 
 	return (
