@@ -5,9 +5,10 @@ import styles from './Augment.module.scss';
 
 type AugmentIconProps = {
 	type: Augment;
+    selected?: boolean;
 };
 
-const AugmentIcon: FC<AugmentIconProps> = ({ type }) => {
+const AugmentIcon: FC<AugmentIconProps> = ({ type, selected = false }) => {
 	const getName = () => {
 		if (type === 'eod-technician') return 'EOD Technician';
 		if (type === 'gravity-md') return 'Gravity MD';
@@ -29,7 +30,7 @@ const AugmentIcon: FC<AugmentIconProps> = ({ type }) => {
 	return (
 		<div
 			title={getName()}
-			className={`${styles.augment} ${styles[type]}`}></div>
+			className={`${styles.augment} ${selected ? styles['selected'] : ''} ${styles[type]}`}></div>
 	);
 };
 

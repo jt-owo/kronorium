@@ -38,7 +38,7 @@ export type Augment =
     | 'strength-training'
     | 'hidden-impact'
     | 'expresso'
-    | 'vampiric-extracition'
+    | 'vampiric-extraction'
     | 'triple-shot'
     // SPEED COLA
     | 'speedy-roulette'
