@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { HashRouter, Route, Routes, useLocation } from 'react-router-dom';
+import type { FC } from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import Path from '../util/paths';
+import { Path } from '../util/paths';
 import ScrollToAnchor from './Scrolling/ScrollToAnchor/ScrollToAnchor';
 
 import Container from './Layout/Container/Container';

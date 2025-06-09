@@ -1,5 +1,12 @@
-@import '../../assets/styles/colors';
+@use '../../assets/styles/colors';
 
 #schematics {
 	width: 1px;
+    margin: 0;
+    float: left;
+}
+
+#schematics-missions {
+	width: 1px;
+    margin: 0 0 20px 0;
 }

@@ -1,12 +1,12 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 
-import Path from '../../../util/paths';
+import { Path } from '../../../util/paths';
 
 import View from '../../../components/Layout/View/View';
 import Guide from '../../../components/Layout/View/Guide/Guide';
 
-import PerkIcon, { Perk } from '../../../components/Perk/Perk';
-import AugmentIcon, { Augment } from '../../../components/Augment/Augment';
+import PerkIcon from '../../../components/Perk/PerkIcon';
+import AugmentIcon from '../../../components/Augment/Augment';
 
 import styles from './Augments.module.scss';
 
@@ -25,123 +25,123 @@ const Augments: FC = () => {
 					<tbody>
 						<tr>
 							<td>
-								<PerkIcon type={Perk.STAMIN_UP} />
+								<PerkIcon type="stamin-up" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.HOT_FOOT} />
+								<AugmentIcon type="hot-foot" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.STALKER} />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<PerkIcon type={Perk.QUICK_REVIVE} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.KARMIC_RETURN} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.DYING_WISH} />
+								<AugmentIcon type="stalker" />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<PerkIcon type={Perk.JUGGERNOG} />
+								<PerkIcon type="quick-revive" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.HARDENED_PLATES} />
+								<AugmentIcon type="karmic-return" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.REACTIVE_ARMOR} />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<PerkIcon type={Perk.MELEE_MACCHIATO} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.STRENGTH_TRAINING} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.EXPRESSO} />
+								<AugmentIcon type="dying-wish" />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<PerkIcon type={Perk.SPEED_COLA} />
+								<PerkIcon type="juggernog" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.FAST_PITCHER} />
+								<AugmentIcon type="hardened-plates" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.CLASSIC_FORMULA} />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<PerkIcon type={Perk.PHD_FLOPPER} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.TRIBOLOGIST} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.PHD_SLIDER} />
+								<AugmentIcon type="reactive-armor" />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<PerkIcon type={Perk.DEADSHOT_DAIQUIRI} />
+								<PerkIcon type="melee-macchiato" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.DEAD_BREAK} />
+								<AugmentIcon type="strength-training" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.DEAD_AGAIN} />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<PerkIcon type={Perk.ELEMENTAL_POP} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.VULNERA_BEAN} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.ELECTRIC_CHERRY} />
+								<AugmentIcon type="expresso" />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<PerkIcon type={Perk.VULTURE_AID} />
+								<PerkIcon type="speed-cola" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.PICKY_EATER} />
+								<AugmentIcon type="fast-pitcher" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.PARTING_GIFT} />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<PerkIcon type={Perk.DEATH_PERCEPTION} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.EXTRA_CHANGE} />
-							</td>
-							<td>
-								<AugmentIcon type={Augment.CRITICAL_EYE} />
+								<AugmentIcon type="classic-formula" />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<PerkIcon type={Perk.DOUBLE_TAP_ROOT_BEET} />
+								<PerkIcon type="phd-flopper" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.DOUBLE_OR_NOTHING} />
+								<AugmentIcon type="tribologist" />
 							</td>
 							<td>
-								<AugmentIcon type={Augment.DOUBLE_IMPACT} />
+								<AugmentIcon type="phd-slider" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<PerkIcon type="deadshot-daiquiri" />
+							</td>
+							<td>
+								<AugmentIcon type="dead-break" />
+							</td>
+							<td>
+								<AugmentIcon type="dead-again" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<PerkIcon type="elemental-pop" />
+							</td>
+							<td>
+								<AugmentIcon type="vulnera-bean" />
+							</td>
+							<td>
+								<AugmentIcon type="electric-cherry" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<PerkIcon type="vulture-aid" />
+							</td>
+							<td>
+								<AugmentIcon type="picky-eater" />
+							</td>
+							<td>
+								<AugmentIcon type="parting-gift" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<PerkIcon type="death-perception" />
+							</td>
+							<td>
+								<AugmentIcon type="extra-change" />
+							</td>
+							<td>
+								<AugmentIcon type="critical-eye" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<PerkIcon type="double-tap-root-beer" />
+							</td>
+							<td>
+								<AugmentIcon type="double-or-nothing" />
+							</td>
+							<td>
+								<AugmentIcon type="double-impact" />
 							</td>
 						</tr>
 					</tbody>

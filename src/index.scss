@@ -1,24 +1,49 @@
-@import './assets/styles/colors.scss';
+@use './assets/styles/colors';
 
-:target {
-	border: 2px solid darkorange;
+:root {
+	color-scheme: light dark;
+	color: colors.$font-light;
+	font-family: 'Roboto', sans-serif;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body,
-#root,
-#kronorium {
+body {
+	min-width: 100vw;
 	width: 100%;
+	min-height: 100vh;
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: $dark-gray-1;
+
+	background: linear-gradient(
+		to bottom,
+		#000000 0%,
+		#0a0a0a 30%,
+		#141414 70%,
+		#0a0a0a 100%
+	);
+	background-attachment: fixed;
+
+	&::before {
+		content: '';
+		position: fixed;
+		inset: 0;
+		background: radial-gradient(
+			ellipse at center,
+			transparent 60%,
+			rgba(0, 0, 0, 0.6) 100%
+		);
+		pointer-events: none;
+		z-index: -1;
+	}
 }
 
 * {
 	box-sizing: border-box;
-	color: $font-light;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -29,15 +54,61 @@ a {
 	}
 }
 
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.8rem;
+	font-weight: 900;
+	color: colors.$orange;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	text-align: center;
+	margin: 40px 0 20px;
+	text-shadow: 0 0 6px rgba(255, 106, 0, 0.7), 0 0 10px rgba(255, 106, 0, 0.4);
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: colors.$orange;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	margin: 10px 0 30px;
+	text-shadow: 0 0 4px rgba(255, 166, 77, 0.6);
+	opacity: 0.85;
+}
+
+h3 {
+	font-family: 'Oswald', 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: #b0b0b0;
+	text-shadow: 1px 1px 3px #1a1a1a;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	user-select: none;
+	margin-bottom: 20px;
+}
+
 input {
-	color: $font-dark;
+	color: colors.$font-dark;
+}
+
+.result {
+	max-width: 320px;
+	margin: 20px 0;
+	padding: 16px 20px;
+	background-color: rgba(10, 10, 10, 0.85);
+	color: colors.$font-light;
+	border-radius: 6px;
+	border: 2px solid colors.$orange;
+	box-shadow: 0 0 12px rgba(255, 106, 0, 0.25);
 }
 
 button {
 	border-radius: 4px;
-	background-color: $dark-gray-3;
 	border: none;
-	color: $font-light;
+	color: colors.$font-light;
 	text-align: center;
 	font-size: 14px;
 	padding: 10px;
@@ -56,37 +127,134 @@ button:disabled {
 	cursor: not-allowed;
 }
 
+button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	border: 2px solid colors.$orange;
+	border-radius: 6px;
+	background: rgba(0, 0, 0, 0.8);
+	color: colors.$font-light;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+button:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300%;
+	height: 300%;
+	background: colors.$orange;
+	transition: all 0.4s ease;
+	border-radius: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	opacity: 0.3;
+}
+
+button:hover {
+	background: #333;
+	border-color: colors.$orange;
+}
+
+button:hover:before {
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 0.1;
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+button span {
+	position: relative;
+	z-index: 1;
+}
+
 table {
-	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
 	border-collapse: collapse;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: colors.$font-light;
+	font-family: 'Roboto', sans-serif;
+	margin: 40px auto;
+	box-shadow: 0 0 16px colors.$brown;
+	border: 2px solid colors.$orange;
+	border-radius: 6px;
+	overflow: hidden;
+
+	tr:not(:last-child) td,
+	tr:not(:last-child) th {
+		border-bottom: 1px solid colors.$brown;
+	}
 
 	td,
 	th {
-		border: 1px solid $dark-gray-3;
-		padding: 8px;
+		padding: 12px 16px;
 	}
 
 	th {
-		padding-top: 12px;
-		padding-bottom: 12px;
-		text-align: left;
-		background-color: $dark-gray-3;
-		color: $font-light;
-	}
-
-	tr:nth-child(even) {
-		background-color: $dark-gray-1;
-	}
-
-	tr:nth-child(odd) {
-		background-color: $dark-gray-2;
+		background-color: #111;
+		color: colors.$orange;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 1px;
 	}
 
 	tr {
-		td {
-			&:hover {
-				background-color: $dark-gray-3;
-			}
+		&:hover {
+			background-color: rgba(255, 106, 0, 0.05);
 		}
 	}
+}
+
+.input-container {
+	position: relative;
+	width: 100%;
+	max-width: 320px;
+	margin-top: 20px;
+}
+
+.input {
+	width: 100%;
+	padding: 12px 16px;
+	letter-spacing: 1px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: colors.$font-light;
+	border-radius: 6px;
+	border: 2px solid colors.$orange;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	outline: none;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input::placeholder {
+	color: #888;
+	text-transform: uppercase;
+}
+
+.input:focus {
+	border-color: #ffa64d;
+	box-shadow: 0 0 8px colors.$orange;
+}
+
+label {
+	display: block;
+	margin-bottom: 6px;
+	color: colors.$orange;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }

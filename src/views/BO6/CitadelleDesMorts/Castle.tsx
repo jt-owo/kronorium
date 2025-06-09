@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import Path from '../../../util/paths';
+import type { FC } from 'react';
+import { Path } from '../../../util/paths';
 
 import View from '../../../components/Layout/View/View';
 import Guide from '../../../components/Layout/View/Guide/Guide';

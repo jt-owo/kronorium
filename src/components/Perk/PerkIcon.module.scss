@@ -1,0 +1,53 @@
+.perk {
+	$size: 64px;
+	height: $size;
+	width: $size;
+	background-size: $size;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: auto;
+
+	&.stamin-up {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5a/StaminUp_HUD_Icon_BOCW.png);
+	}
+
+	&.quick-revive {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/1c/QuickRevive_HUD_Icon_BOCW.png);
+	}
+
+	&.juggernog {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/ab/Juggernog_HUD_Icon_BOCW.png);
+	}
+
+	&.melee-macchiato {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5a/MeleeMacchiato_HUD_Icon_BO6.png);
+	}
+
+	&.speed-cola {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/7e/SpeedCola_HUD_Icon_BOCW.png);
+	}
+
+	&.phd-flopper {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/1a/PHDSlider_HUD_Icon_BOCW.png);
+	}
+
+	&.deadshot-daiquiri {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/40/DeadshotDaiquiri_HUD_Icon_BOCW.png);
+	}
+
+	&.elemental-pop {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/73/ElementalPop_HUD_Icon_BOCW.png);
+	}
+
+	&.vulture-aid {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/72/VultureAid_HUD_Icon_BO6.png);
+	}
+
+	&.death-perception {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5a/DeathPerception_HUD_Icon_BOCW.png);
+	}
+
+	&.double-tap-root-beer {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/2d/DoubleTapRootBeer_HUD_Icon_BO6.png);
+	}
+}
