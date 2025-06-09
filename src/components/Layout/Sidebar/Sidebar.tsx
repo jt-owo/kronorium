@@ -29,75 +29,88 @@ const Sidebar: FC = () => {
 	const location = useLocation();
 
 	return (
-		<div className={styles.sidebar}>
-			{!location.pathname.includes('bingo') && (
-				<ol className={styles.toc}>
-					<li>
-						<Link to={Path.BO6}>Black Ops 6</Link>
-						<ol>
+		<>
+			{!location.pathname.includes('bingo') &&
+				!location.pathname.includes('cards') && (
+					<div className={styles.sidebar}>
+						<ol className={styles.toc}>
 							<li>
-								<Link to={Path.BO6_AUGMENTS}>
-									Best Augments
-								</Link>
-							</li>
-							<li>
-								<Link to={Path.BO6_TERMINUS}>Terminus</Link>
+								<Link to={Path.BO6}>Black Ops 6</Link>
 								<ol>
 									<li>
-										<Link to={Path.BO6_TERMINUS_CALC}>
-											Calculator
+										<Link to={Path.BO6_AUGMENTS}>
+											Best Augments
 										</Link>
+									</li>
+									<li>
+										<Link to={Path.BO6_TERMINUS}>
+											Terminus
+										</Link>
+										<ol>
+											<li>
+												<Link
+													to={Path.BO6_TERMINUS_CALC}>
+													Calculator
+												</Link>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<Link to={Path.BO6_CITADELLE}>
+											Citadelle Des Morts
+										</Link>
+										<ol>
+											<li>
+												<Link
+													to={
+														Path.BO6_CITADELLE_RAVEN
+													}>
+													Raven Codes
+												</Link>
+											</li>
+										</ol>
+									</li>
+									<li>
+										<Link to={Path.BO6_SHATTERED_VEIL}>
+											Shattered Veil
+										</Link>
+										<ol>
+											<li>
+												<Link
+													to={
+														Path.BO6_SHATTERED_VEIL_CODE_CHEATSHEET
+													}>
+													Code Cheatsheet
+												</Link>
+											</li>
+										</ol>
 									</li>
 								</ol>
 							</li>
 							<li>
-								<Link to={Path.BO6_CITADELLE}>
-									Citadelle Des Morts
-								</Link>
+								<Link to="/mwz">Modern Warfare Zombies</Link>
 								<ol>
 									<li>
-										<Link to={Path.BO6_CITADELLE_RAVEN}>
-											Raven Codes
+										<Link to={Path.MWZ_LOOT}>
+											Guaranteed Loot
 										</Link>
 									</li>
-								</ol>
-							</li>
-							<li>
-								<Link to={Path.BO6_SHATTERED_VEIL}>
-									Shattered Veil
-								</Link>
-								<ol>
 									<li>
-										<Link
-											to={
-												Path.BO6_SHATTERED_VEIL_CODE_CHEATSHEET
-											}>
-											Code Cheatsheet
+										<Link to={Path.MWZ_SCHEMATICS}>
+											Schematics Loot Table
+										</Link>
+									</li>
+									<li>
+										<Link to={Path.MWZ_GRAVEYARD}>
+											Graveyard
 										</Link>
 									</li>
 								</ol>
 							</li>
 						</ol>
-					</li>
-					<li>
-						<Link to="/mwz">Modern Warfare Zombies</Link>
-						<ol>
-							<li>
-								<Link to={Path.MWZ_LOOT}>Guaranteed Loot</Link>
-							</li>
-							<li>
-								<Link to={Path.MWZ_SCHEMATICS}>
-									Schematics Loot Table
-								</Link>
-							</li>
-							<li>
-								<Link to={Path.MWZ_GRAVEYARD}>Graveyard</Link>
-							</li>
-						</ol>
-					</li>
-				</ol>
-			)}
-		</div>
+					</div>
+				)}
+		</>
 	);
 };
 

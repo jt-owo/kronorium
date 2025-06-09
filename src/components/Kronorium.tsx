@@ -19,6 +19,7 @@ import Castle from '../views/BO6/CitadelleDesMorts/Castle';
 import Mansion from '../views/BO6/Mansion/Mansion';
 import MWZ from '../views/MWZ/MWZ';
 import Bingo from '../views/MWZ/Bingo/Bingo';
+import CardDuel from '../views/CardDuel/CardDuel';
 
 const Kronorium: FC = () => {
 	return (
@@ -36,12 +37,19 @@ const Kronorium: FC = () => {
 						<Route path={Path.ROOT} element={<Home />} />
 						<Route path={Path.ABOUT} element={<Home />} />
 						<Route path={Path.BO6} element={<BO6 />} />
-						<Route path={Path.BO6_AUGMENTS} element={<Augments />} />
+						<Route
+							path={Path.BO6_AUGMENTS}
+							element={<Augments />}
+						/>
 						<Route path={Path.BO6_TERMINUS} element={<Island />} />
 						<Route path={Path.BO6_CITADELLE} element={<Castle />} />
-						<Route path={Path.BO6_SHATTERED_VEIL} element={<Mansion />} />
+						<Route
+							path={Path.BO6_SHATTERED_VEIL}
+							element={<Mansion />}
+						/>
 						<Route path={Path.MWZ} element={<MWZ />} />
 						<Route path={Path.MWZ_BINGO} element={<Bingo />} />
+						<Route path={Path.CARDS_DUEL} element={<CardDuel />} />
 					</Routes>
 				</Row>
 			</HashRouter>

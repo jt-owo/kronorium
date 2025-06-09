@@ -1,14 +1,12 @@
 import React from 'react';
 import { useState, type FC } from 'react';
 
-import { type { Augment, Perk } from '../../../util/enum';
-import { Path } } from '../../../util/paths';
+import type { Augment, Perk } from '../../../util/enum';
+import { Path } from '../../../util/paths';
 
 import View from '../../../components/Layout/View/View';
 import Guide from '../../../components/Layout/View/Guide/Guide';
 
-import PerkIcon from '../../../components/Perk/PerkIcon';
-import AugmentIcon from '../../../components/Augment/Augment';
 import PerkIcon from '../../../components/Perk/PerkIcon';
 import AugmentIcon from '../../../components/Augment/Augment';
 
