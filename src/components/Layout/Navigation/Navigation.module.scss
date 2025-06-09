@@ -1,17 +1,72 @@
-@import '../../../assets/styles/colors.scss';
+@use '../../../assets/styles/colors';
 
 .navbar {
 	overflow: hidden;
-	background-color: $dark-gray-2;
 	position: sticky;
 	position: -webkit-sticky;
+	user-select: none;
+
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	border-bottom: 2px solid colors.$orange;
+	padding: 12px 24px;
+	position: fixed;
 	top: 0;
+	left: 0;
+	z-index: 1000;
+	backdrop-filter: blur(4px);
+
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		gap: 32px;
+		margin: 0;
+		padding: 0;
+
+		li {
+			a {
+				text-decoration: none;
+				color: colors.$font-light;
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-weight: 600;
+				position: relative;
+				padding: 4px 8px;
+				transition: color 0.3s ease;
+
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: -4px;
+					height: 2px;
+					width: 100%;
+					background-color: colors.$orange;
+					transform: scaleX(0);
+					transform-origin: right;
+					transition: transform 0.3s ease;
+				}
+
+				&:hover {
+					color: colors.$orange;
+
+					&::after {
+						transform: scaleX(1);
+						transform-origin: left;
+					}
+				}
+			}
+		}
+	}
 }
 
 .navbar a {
 	float: left;
 	display: block;
-	color: $font-light;
+	color: colors.$font-light;
 	text-align: center;
 	padding: 14px 20px;
 	text-decoration: none;
@@ -19,13 +74,4 @@
 
 .navbar a.right {
 	float: right;
-}
-
-.navbar a:hover {
-	background-color: $dark-gray-3;
-}
-
-.navbar a.active {
-	background-color: $dark-gray-3;
-	color: white;
 }

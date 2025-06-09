@@ -9,10 +9,21 @@ interface ScrollToAnchorProps {
 	block?: ScrollLogicalPosition;
 }
 
-const ScrollToAnchor = ({ behavior = 'auto', initialBehavior = 'auto', inline = 'nearest', block = 'start' }: ScrollToAnchorProps): null => {
+const ScrollToAnchor = ({
+	behavior = 'auto',
+	initialBehavior = 'auto',
+	inline = 'nearest',
+	block = 'start'
+}: ScrollToAnchorProps): null => {
 	const [hash, setHash] = useState(window.location.hash);
 	const [count, setCount] = useState(0);
-	const originalListeners = useRef<{ [key: string]: Function }>({});
+	const originalListeners = useRef<{
+		[key: string]: (
+			data: never,
+			unused: string,
+			url?: string | URL | null
+		) => void;
+	}>({});
 
 	// We need to know if this is the first run. If it is, we can do an instant jump, no scrolling.
 	const [firstRun, setFirstRun] = useState(true);
@@ -33,17 +44,24 @@ const ScrollToAnchor = ({ behavior = 'auto', initialBehavior = 'auto', inline = 
 
 		const addWindowListeners = () => {
 			originalListeners.current.pushState = window.history.pushState;
-			originalListeners.current.replaceState = window.history.replaceState;
+			originalListeners.current.replaceState =
+				window.history.replaceState;
 
-			window.history.pushState = function (...args: any) {
-				const result = originalListeners.current.pushState.apply(this, args);
+			window.history.pushState = function (...args: never) {
+				const result = originalListeners.current.pushState.apply(
+					this,
+					args
+				);
 				window.dispatchEvent(new Event('pushstate'));
 				window.dispatchEvent(new Event('locationchange'));
 				return result;
 			};
 
-			window.history.replaceState = function (...args: any) {
-				const result = originalListeners.current.replaceState.apply(this, args);
+			window.history.replaceState = function (...args: never) {
+				const result = originalListeners.current.replaceState.apply(
+					this,
+					args
+				);
 				window.dispatchEvent(new Event('replacestate'));
 				window.dispatchEvent(new Event('locationchange'));
 				return result;
@@ -54,8 +72,10 @@ const ScrollToAnchor = ({ behavior = 'auto', initialBehavior = 'auto', inline = 
 		};
 
 		const removeWindowListeners = () => {
-			window.history.pushState = originalListeners.current.pushState as typeof window.history.pushState;
-			window.history.replaceState = originalListeners.current.replaceState as typeof window.history.replaceState;
+			window.history.pushState = originalListeners.current
+				.pushState as typeof window.history.pushState;
+			window.history.replaceState = originalListeners.current
+				.replaceState as typeof window.history.replaceState;
 			window.removeEventListener('popstate', onPopState);
 			window.removeEventListener('locationchange', handleLocationChange);
 		};

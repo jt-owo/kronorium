@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react';
+import { type FC, type ReactNode } from 'react';
 
 type GuideProps = {
-    id: string;
+	id: string;
 	title: string;
 	children: ReactNode;
 	desc?: string;

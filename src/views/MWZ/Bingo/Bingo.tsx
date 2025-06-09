@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { useState, type FC } from 'react';
 
 import View from '../../../components/Layout/View/View';
 
@@ -16,15 +16,15 @@ const Bingo: FC = () => {
 	const [checked, setChecked] = useState(0);
 
 	const generate = () => {
-		let copy: string[] = [];
+		const copy: string[] = [];
 		entries.entries.forEach((list) => {
 			copy.push(...list);
 		});
 
-		let cardList: BingoCard[] = [];
+		const cardList: BingoCard[] = [];
 		for (let i = 0; i < Math.pow(5, 2); i++) {
 			const item = copy[Math.floor(Math.random() * copy.length)];
-			let index = copy.indexOf(item);
+			const index = copy.indexOf(item);
 			if (index !== -1) copy.splice(index, 1);
 			cardList.push({
 				challenge: item,
@@ -40,29 +40,30 @@ const Bingo: FC = () => {
 		copy[index].checked = !copy[index].checked;
 		setCards(copy);
 
-		const count = document.getElementsByClassName(styles.checked);
+		const count = cards.filter((x) => x.checked);
 		setChecked(count.length);
 	};
 
 	if (cards.length < 1) generate();
 
 	return (
-		<View title="MWZ Bingo (Prototype)">
+		<View title="Modern Warfare Zombies Bingo">
+			<h3>Prototype</h3>
 			<p>
 				<button onClick={() => generate()}>Generate</button>
 			</p>
-			<p>
-				<span>
-					<b>
-						<u>Points:</u> {checked}
-					</b>
-				</span>
-			</p>
-			<div className={styles.grid}>
+			<label>
+				Points:
+				<div className="result">{checked}</div>
+			</label>
+			<div className={styles['grid']}>
 				{cards &&
 					cards.map((c, i) => {
 						return (
-							<div key={`card${i}`} className={c.checked ? styles.checked : ''} onClick={() => check(i)}>
+							<div
+								key={`card${i}`}
+								className={c.checked ? styles['checked'] : ''}
+								onClick={() => check(i)}>
 								<span>{c.challenge}</span>
 							</div>
 						);

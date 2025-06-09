@@ -1,23 +1,41 @@
-@import '../../../assets/styles/colors.scss';
+@use '../../../assets/styles/colors';
 
 .scrollTop {
-    display: none;
-    position: fixed;
-    background: $dark-gray-3;
-    width: 30px;
-    height: 30px;
-    border-radius: 25px;
-    bottom: 5%;
-    left: 90%;
-    text-align: center;
-    cursor: pointer;
+	display: none;
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	width: 48px;
+	height: 48px;
+	line-height: 1;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: colors.$orange;
+	border: 2px solid colors.$orange;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
+	z-index: 999;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+	cursor: pointer;
 
-    &.active {
-        display: block;
-    }
+	&.active {
+		display: flex;
+	}
 
-    &:hover {
-        transform: scale(1.1);
-        -moz-transform: scale(1.1);
-    }
+	&:hover {
+		background-color: #1a1a1a;
+		box-shadow: 0 0 15px rgba(255, 106, 0, 0.6);
+		transform: translateY(-4px);
+	}
+
+	.icon {
+		width: 20px;
+		height: 20px;
+		stroke: colors.$orange;
+	}
 }

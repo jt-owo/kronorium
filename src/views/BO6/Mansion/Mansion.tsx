@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import View from '../../../components/Layout/View/View';
 import Guide from '../../../components/Layout/View/Guide/Guide';
 
@@ -8,12 +8,12 @@ import codes from './codes.json';
 
 const Mansion: FC = () => {
 	const check = (e: React.MouseEvent) => {
-        const checked = document.getElementsByClassName(styles.checked);
+		const checked = document.getElementsByClassName(styles.checked);
 		for (let i = 0; i < checked.length; i++) {
 			checked[i].classList.remove(styles.checked);
 		}
-        
-        const element = e.currentTarget as HTMLTableCellElement;
+
+		const element = e.currentTarget as HTMLTableCellElement;
 		if (element.classList.contains(styles.checked)) {
 			element.classList.remove(styles.checked);
 		} else {

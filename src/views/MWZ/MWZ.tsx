@@ -1,12 +1,12 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import { FC } from 'react';
-import Path from '../../util/paths';
+import type { FC } from 'react';
+
+import { Path } from '../../util/paths';
 
 import View from '../../components/Layout/View/View';
 import Guide from '../../components/Layout/View/Guide/Guide';
 
 import MapLink from './MapLink/MapLink';
-import Acquisition, { AcquisitionType } from './Acquisition/Acquisition';
+import SchematicIcon from '../../components/Schematic/Schematic';
 
 import styles from './MWZ.module.scss';
 
@@ -41,27 +41,27 @@ const MWZ: FC = () => {
 					</tbody>
 				</table>
 			</Guide>
-			<Guide id={Path.MWZ_SCHEMATICS} title="Schematics Loot Table">
-				<table id={styles.schematics} className={styles.table}>
+			<Guide id={Path.MWZ_SCHEMATICS} title="Schematics Loot Tables">
+				<table id={styles['schematics']} className={styles['table']}>
 					<tbody>
 						<tr>
 							<th colSpan={5}>Tier 1</th>
 						</tr>
 						<tr>
 							<td>
-								<Acquisition type={AcquisitionType.DEADSHOT_DAIQUIRI} />
+								<SchematicIcon type="deadshot-daiquiri" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.SPEED_COLA} />
+								<SchematicIcon type="speed-cola" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.STAMIN_UP} />
+								<SchematicIcon type="stamin-up" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.BRAIN_ROT} />
+								<SchematicIcon type="brain-rot" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.NAPALM_BURST} />
+								<SchematicIcon type="napalm-burst" />
 							</td>
 						</tr>
 						<tr>
@@ -69,19 +69,19 @@ const MWZ: FC = () => {
 						</tr>
 						<tr>
 							<td>
-								<Acquisition type={AcquisitionType.RAW_AETHERIUM_CRYSTAL} />
+								<SchematicIcon type="raw-aetherium-crystal" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.JUGGERNOG} />
+								<SchematicIcon type="juggernog" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.PHD_FLOPPER} />
+								<SchematicIcon type="phd-flopper" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.DEAD_WIRE} />
+								<SchematicIcon type="dead-wire" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.SHATTER_BLAST} />
+								<SchematicIcon type="shatter-blast" />
 							</td>
 						</tr>
 						<tr>
@@ -89,35 +89,34 @@ const MWZ: FC = () => {
 						</tr>
 						<tr>
 							<td>
-								<Acquisition type={AcquisitionType.EPIC_AETHER_TOOL} />
+								<SchematicIcon type="epic-aether-tool" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.REFINED_AETHERIUM_CRYSTAL} />
+								<SchematicIcon type="refined-aetherium-crystal" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.ELEMENTAL_POP} />
+								<SchematicIcon type="elemental-pop" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.TOMBSTONE_SODA} />
+								<SchematicIcon type="tombstone-soda" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.RAY_GUN} />
+								<SchematicIcon type="ray-gun" />
 							</td>
 						</tr>
 					</tbody>
 				</table>
-				<br />
-				<table>
+				<table id={styles['schematics-missions']}>
 					<tbody>
 						<tr>
 							<th colSpan={2}>Act 1</th>
 						</tr>
 						<tr>
 							<td>
-								<Acquisition type={AcquisitionType.UNCOMMON_AETHER_TOOL} />
+								<SchematicIcon type="uncommon-aether-tool" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.QUICK_REVIVE} />
+								<SchematicIcon type="quick-revive" />
 							</td>
 						</tr>
 						<tr>
@@ -125,10 +124,10 @@ const MWZ: FC = () => {
 						</tr>
 						<tr>
 							<td>
-								<Acquisition type={AcquisitionType.RARE_AETHER_TOOL} />
+								<SchematicIcon type="rare-aether-tool" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.CRYO_FREEZE} />
+								<SchematicIcon type="cryo-freeze" />
 							</td>
 						</tr>
 						<tr>
@@ -136,10 +135,10 @@ const MWZ: FC = () => {
 						</tr>
 						<tr>
 							<td>
-								<Acquisition type={AcquisitionType.DEATH_PERCEPTION} />
+								<SchematicIcon type="death-perception" />
 							</td>
 							<td>
-								<Acquisition type={AcquisitionType.WUNDERWAFFE_DG2} />
+								<SchematicIcon type="wunderwaffe-dg2" />
 							</td>
 						</tr>
 					</tbody>
@@ -155,13 +154,20 @@ const MWZ: FC = () => {
 				</p>
 				<p>Interacting with the grave allows you to pay respects.</p>
 				<p>
-					This will <u>strip off</u> the <u>Rarity</u>, the <u>Pack-a-Punch Level</u> & the <u>Ammo Mod</u> of the weapon you are holding.
+					This will <u>strip off</u> the <u>Rarity</u>, the{' '}
+					<u>Pack-a-Punch Level</u> & the <u>Ammo Mod</u> of the
+					weapon you are holding.
 				</p>
 				<p>
-					Afterwards you can loot the grave with a chance to get an <u>Aether Tool</u>, an <u>Aetherium Crystal</u> and an <u>Ammo Mod</u> based on the weapon you payed respect with.
+					Afterwards you can loot the grave with a chance to get an{' '}
+					<u>Aether Tool</u>, an <u>Aetherium Crystal</u> and an{' '}
+					<u>Ammo Mod</u> based on the weapon you payed respect with.
 				</p>
 				<p>
-					<i>With this side easter egg & some luck, you can Exil without loosing all of your weapon upgrades.</i>
+					<i>
+						With this side easter egg & some luck, you can Exil
+						without loosing all of your weapon upgrades.
+					</i>
 				</p>
 			</Guide>
 		</View>

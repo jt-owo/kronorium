@@ -1,0 +1,157 @@
+.schematic {
+	$size: 64px;
+	height: $size;
+	width: $size;
+	background-size: $size;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: auto;
+
+	&.uncommon-aether-tool {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/74/Uncommon_AetherTool_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.rare-aether-tool {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/b6/Rare_AetherTool_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.epic-aether-tool {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5a/Epic_AetherTool_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.legendary-aether-tool {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/1b/Legendary_AetherTool_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.raw-aetherium-crystal {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/16/Raw_AetheriumCrystal_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.refined-aetherium-crystal {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/e/e8/Refined_AetheriumCrystal_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.flawless-aetherium-crystal {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/56/Flawless_AetheriumCrystal_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.stamin-up {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/86/StaminUp_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.quick-revive {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/0/01/QuickRevive_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.juggernog {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/11/Juggernog_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.tombstone-soda {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/77/Tombstone_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.speed-cola {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/21/SpeedCola_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.phd-flopper {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/9/96/PhDFlopper_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.deadshot-daiquiri {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/2a/DeadshotDaiquiri_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.elemental-pop {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/e/ef/ElementalPop_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.vulture-aid {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/72/VultureAid_HUD_Icon_BO6.png);
+	}
+
+	&.death-perception {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5c/DeathPerception_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.double-tap-root-beer {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/2d/DoubleTapRootBeer_HUD_Icon_BO6.png);
+	}
+
+	&.brain-rot {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/8a/BrainRot_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.cryo-freeze {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/6/63/Cryofreeze_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.dead-wire {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/1c/DeadWire_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.napalm-burst {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/3a/NapalmBurst_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.shatter-blast {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/d/d0/ShatterBlast_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.ray-gun {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/4c/RayGun_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.scorcher {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/9/9d/Scorcher_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.v-r11 {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/b2/V-R11_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.wunderwaffe-dg2 {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/40/Wunderwaffe_DG-2_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.aether-blade {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/56/AetherBlade_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.blood-burner-keys {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/45/Blood_Burner_Keys_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.dead-wire-detonators {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/9/9e/DeadWireDetonators_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.disciple-bottle {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5f/DiscipleBottle_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.dog-bone {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/49/Dog_Bone_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.golden-armor-plate {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/d/d0/Golden_Armor_Plate_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.golden-mask-filter {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/e/e6/GoldenMaskFilter_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.grenade-bandolier {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/3c/GrenadeBandolier_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.mag-of-holding {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/bf/Mag_of_Holding_Schematic_Icon_Zombies_MWIII.png);
+	}
+
+	&.sergeants-beret {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/a8/SergeantsBeret_Schematic_Icon_Zombies_MWIII.png);
+	}
+}
