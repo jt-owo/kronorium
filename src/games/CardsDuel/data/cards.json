@@ -1,0 +1,16 @@
+{
+    "cards": [
+        {
+            "id": "0",
+            "title": "No Juggernog",
+            "description": "You cannot buy Juggernog this round.",
+            "type": "offensive"
+        },
+        {
+            "id": "1",
+            "title": "No Speed Cola",
+            "description": "You cannot buy Speed Cola this round.",
+            "type": "offensive"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+@use '../../assets/abstracts/colors';
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 320px;
+	margin-top: 20px;
+
+	input {
+		width: 100%;
+		padding: 12px 16px;
+		letter-spacing: 1px;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: colors.$font-light;
+		border-radius: 6px;
+		border: 2px solid colors.$orange;
+		font-size: 16px;
+		outline: none;
+		transition: border-color 0.3s, box-shadow 0.3s;
+	}
+
+	input::placeholder {
+		color: #888888ff;
+		text-transform: uppercase;
+	}
+
+	input:focus {
+		border-color: #ffa64dff;
+		box-shadow: 0 0 8px colors.$orange;
+	}
+
+	input:disabled {
+		color: #888888ff;
+		border-color: colors.$light-gray;
+	}
+}

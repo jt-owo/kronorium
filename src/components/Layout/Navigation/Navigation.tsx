@@ -33,7 +33,7 @@ const Navigation: FC = () => {
 					<NavLink
 						to={Path.CARDS_DUEL}
 						className={`${styles.last} ${getActiveStyle(
-							'/cards'
+							Path.CARDS_DUEL
 						)}`}>
 						Cards Duel
 					</NavLink>

@@ -5,7 +5,11 @@ import ScrollTop from '../../Scrolling/ScrollTop/ScrollTop';
 
 import styles from './Header.module.scss';
 
-const Header: FC = () => {
+type HeaderProps = {
+	visible?: boolean;
+};
+
+const Header: FC<HeaderProps> = ({ visible = false }) => {
 	const scrollRef = useRef<HTMLDivElement>(null);
 
 	const scrollTop = () => {
@@ -15,11 +19,13 @@ const Header: FC = () => {
 	};
 
 	return (
-		<div>
-			<div ref={scrollRef} className={styles.header}>
-				<h1>The Kronorium</h1>
-				<h3>Call of Duty Zombies Resource Hub & Guides</h3>
-			</div>
+		<div ref={scrollRef}>
+			{visible && (
+				<div className={styles.header}>
+					<h1>The Kronorium</h1>
+					<h3>Call of Duty Zombies Resource Hub & Guides</h3>
+				</div>
+			)}
 			<Navigation />
 			<ScrollTop scrollTop={scrollTop} />
 		</div>

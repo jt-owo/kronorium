@@ -1,0 +1,27 @@
+.buttons {
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: 1rem;
+    
+    &.left {
+        justify-content: left;
+    }
+
+    &.right {
+        justify-content: right;
+    }
+    
+    &.center {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    button {
+        $size: 180px;
+
+        flex: 1;
+        min-width: $size;
+        max-width: $size;
+    }
+}

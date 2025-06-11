@@ -1,0 +1,291 @@
+@use '../../../assets/abstracts/colors';
+
+.augment {
+	$size: 64px;
+	height: $size;
+	width: $size;
+	background-size: $size;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: auto;
+    padding: 35px;
+
+    &.selected {
+        border: 2px solid colors.$orange;
+    }
+
+	/* STAMIN-UP */
+	&.hard-target {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/6/67/HardTarget_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.quarterback {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/5c/Quarterback_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.hot-foot {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c6/HotFoot_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.free-faller {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/78/FreeFaller_Augment_Major_Icon_BO6.png);
+	}
+
+	&.stalker {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/56/Stalker_Augment_Major_Icon_BO6.png);
+	}
+
+	&.dasher {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/34/Dasher_Augment_Major_Icon_BO6.png);
+	}
+
+	/* QUICK REVIVE */
+	&.swift-recovery {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c6/HotFoot_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.karmic-return {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/3d/KarmicReturn_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.slow-death {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/76/SlowDeath_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.emt {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/4a/EMT_Augment_Major_Icon_BO6.png);
+	}
+
+	&.equivalent-exchange {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/4a/EMT_Augment_Major_Icon_BO6.png);
+	}
+
+	&.dying-wish {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/ab/DyingWish_Augment_Major_Icon_BO6.png);
+	}
+
+	/* JUGGERNOG */
+	&.retaliation {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/af/Retaliation_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.hardened-plates {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/89/HardenedPlates_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.durable-plates {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/ce/DurablePlates_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.probiotic {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/af/Probiotic_Augment_Major_Icon_BO6.png);
+	}
+
+	&.turtle-shell {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/28/TurtleShell_Augment_Major_Icon_BO6.png);
+	}
+
+	&.reactive-armor {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/38/ReactiveArmor_Augment_Major_Icon_BO6.png);
+	}
+
+	/* MELEE MACCHIATO */
+	&.stick-n-move {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c6/HotFoot_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.strength-training {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/af/Retaliation_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.hidden-impact {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/ba/HiddenImpact_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.expresso {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/85/ClassicFormula_Augment_Major_Icon_BO6.png);
+	}
+
+	&.vampiric-extraction {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/88/VampiricExtraction_Augment_Major_Icon_BO6.png);
+	}
+
+	&.triple-shot {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/4e/TripleShot_Augment_Major_Icon_BO6.png);
+	}
+
+	/* SPEED COLA */
+	&.speedy-roulette {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/85/SpeedyRoulette_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.quick-swap {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/0/00/QuickSwap_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.fast-pitcher {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/32/FastPitcher_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.supercharged {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/e/ea/Supercharged_Augment_Major_Icon_BO6.png);
+	}
+
+	&.classic-formula {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/85/ClassicFormula_Augment_Major_Icon_BO6.png);
+	}
+
+	&.phantom-reload {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/7/79/PhantomReload_Augment_Major_Icon_BO6.png);
+	}
+
+	/* PHD FLOPPER */
+	&.environmentalist {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/0/08/Environmentalist_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.eod-technician {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/33/EODTechnician_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.tribologist {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c6/HotFoot_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.gravity-md {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/be/GravityMD_Augment_Major_Icon_BO6.png);
+	}
+
+	&.dr-ram {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/2d/DrRam_Augment_Major_Icon_BO6.png);
+	}
+
+	&.phd-slider {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/1/15/PhDSlider_Augment_Major_Icon_BO6.png);
+	}
+
+	/* DEADSHOT DAIQUIRI */
+	&.dead-break {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/af/Retaliation_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.dead-draw {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/a/a4/DeadDraw_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.dead-set {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c5/DeadSet_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.dead-head {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/27/DeadHead_Augment_Major_Icon_BO6.png);
+	}
+
+	&.dead-first {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/40/DeadFirst_Augment_Major_Icon_BO6.png);
+	}
+
+	&.dead-again {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/40/DeadFirst_Augment_Major_Icon_BO6.png);
+	}
+
+	/* ELEMENTAL POP */
+	&.vulnera-bean {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c6/HotFoot_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.pineapple-blast {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/0/06/PineappleBlast_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.chill-berry {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/c/c5/ChillBerry_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.citrux-focus {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/ba/CitrusFocus_Augment_Major_Icon_BO6.png);
+	}
+
+	&.imperil-peach {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/4a/EMT_Augment_Major_Icon_BO6.png);
+	}
+
+	&.electric-cherry {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/9/97/ElectricCherry_Augment_Major_Icon_BO6.png);
+	}
+
+	/* VULTURE AID */
+	&.condors-reach {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/f/f4/Supermassive_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.carrion-luggage {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/3/33/EODTechnician_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.picky-eater {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/5/55/PickyEater_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.fetid-upgr-aid {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/f/f5/FrenzyFire_Augment_Major_Icon_BO6.png);
+	}
+
+	&.smell-of-death {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/ba/CitrusFocus_Augment_Major_Icon_BO6.png);
+	}
+
+	&.parting-gift {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/e/ea/Supercharged_Augment_Major_Icon_BO6.png);
+	}
+
+	/* DEATH PERCEPTION */
+	&.birds-eye-view {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/85/SpeedyRoulette_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.extra-change {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/83/Incendiary_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.further-insight {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/f/f4/Supermassive_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.treasure-hunter {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/e/ea/Supercharged_Augment_Major_Icon_BO6.png);
+	}
+
+	&.death-stare {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/4a/EMT_Augment_Major_Icon_BO6.png);
+	}
+
+	&.critical-eye {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/40/DeadFirst_Augment_Major_Icon_BO6.png);
+	}
+
+	/* DOUBLE TAP ROOT BEER */
+	&.double-time {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/85/SpeedyRoulette_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.double-or-nothing {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/be/DoubleOrNothing_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.double-play {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/b/ba/HiddenImpact_Augment_Minor_Icon_BO6.png);
+	}
+
+	&.double-jeopardy {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/4/40/DeadFirst_Augment_Major_Icon_BO6.png);
+	}
+
+	&.double-impact {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/0/00/DoubleImpact_Augment_Major_Icon_BO6.png);
+	}
+
+	&.double-standard {
+		background-image: url(https://static.wikia.nocookie.net/callofduty/images/2/27/DeadHead_Augment_Major_Icon_BO6.png);
+	}
+}

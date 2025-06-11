@@ -1,0 +1,58 @@
+@use 'sass:color';
+@use '../../assets/abstracts/colors';
+
+$font-family: colors.$font-family;
+
+$color: colors.$orange;
+$bg-color: #220f00;
+$active-color: color.adjust($color, $hue: -1);
+$disabled-color: #1c1c1cff;
+$disabled-text: #555555ff;
+$disabled-border: #444444ff;
+
+.button {
+	background-color: $bg-color;
+	color: colors.$orange;
+	border: 2px solid $color;
+	border-radius: 6px;
+	font-family: $font-family;
+	font-weight: 700;
+	font-size: 1.2rem;
+	padding: 0.75rem 2rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease, color 0.3s ease,
+		box-shadow 0.3s ease, transform 0.15s ease;
+	cursor: pointer;
+
+	&:hover:not(:disabled) {
+		background-color: $color;
+		color: $disabled-color;
+		transform: scale(1.05);
+	}
+
+    &:hover:active:not(:disabled) {
+        transform: scale(1);
+    }
+
+	&:active:not(:disabled) {
+		color: $disabled-color;
+		background-color: $active-color;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled {
+		color: $disabled-text;
+		background-color: $disabled-color;
+		border-color: $disabled-border;
+		transform: none;
+		cursor: not-allowed;
+	}
+
+	& + button {
+		margin-left: 1rem;
+	}
+}

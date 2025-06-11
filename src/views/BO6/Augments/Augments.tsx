@@ -7,8 +7,8 @@ import { Path } from '../../../util/paths';
 import View from '../../../components/Layout/View/View';
 import Guide from '../../../components/Layout/View/Guide/Guide';
 
-import PerkIcon from '../../../components/Perk/PerkIcon';
-import AugmentIcon from '../../../components/Augment/Augment';
+import PerkIcon from '../../../components/Icons/Perk/PerkIcon';
+import AugmentIcon from '../../../components/Icons/Augment/Augment';
 
 import styles from './Augments.module.scss';
 
@@ -17,6 +17,7 @@ interface RowData {
 	perk: Perk;
 	minor: Augment;
 	major: Augment;
+	description?: string;
 	augments: {
 		minor: Augment[];
 		major: Augment[];
@@ -129,6 +130,7 @@ const data: RowData[] = [
 		perk: 'double-tap-root-beer',
 		minor: 'double-or-nothing',
 		major: 'double-standard',
+		description: 'Inscreases rate of fire by 25%',
 		augments: {
 			minor: ['double-time', 'double-or-nothing', 'double-play'],
 			major: ['double-jeopardy', 'double-impact', 'double-standard']
@@ -170,47 +172,51 @@ const Augments: FC = () => {
 										<AugmentIcon type={row.major} />
 									</td>
 								</tr>
-								<tr
-									className={`${styles['expanded-row']} ${
-										expandedRow === row.id
-											? styles['expanded']
-											: ''
-									}`}>
-									<td
-										className={
-											styles['expanded-content']
-										}></td>
-									<td>
-										<div>
-											{row.augments.minor.map(
-												(augment) => (
-													<AugmentIcon
-														selected={
-															row.minor ===
-															augment
-														}
-														type={augment}
-													/>
-												)
-											)}
-										</div>
-									</td>
-									<td>
-										<div>
-											{row.augments.major.map(
-												(augment) => (
-													<AugmentIcon
-														selected={
-															row.major ===
-															augment
-														}
-														type={augment}
-													/>
-												)
-											)}
-										</div>
-									</td>
-								</tr>
+								{expandedRow === row.id && (
+									<tr
+										className={`${styles['expanded-row']} ${
+											expandedRow === row.id
+												? styles['expanded']
+												: ''
+										}`}>
+										<td
+											className={
+												styles['expanded-content']
+											}>
+											<span>{row.description}</span>
+										</td>
+										<td>
+											<div>
+												{row.augments.minor.map(
+													(augment) => (
+														<AugmentIcon
+															selected={
+																row.minor ===
+																augment
+															}
+															type={augment}
+														/>
+													)
+												)}
+											</div>
+										</td>
+										<td>
+											<div>
+												{row.augments.major.map(
+													(augment) => (
+														<AugmentIcon
+															selected={
+																row.major ===
+																augment
+															}
+															type={augment}
+														/>
+													)
+												)}
+											</div>
+										</td>
+									</tr>
+								)}
 							</React.Fragment>
 						))}
 					</tbody>

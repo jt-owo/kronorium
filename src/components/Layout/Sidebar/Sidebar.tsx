@@ -5,11 +5,12 @@ import { Path } from '../../../util/paths';
 
 import styles from './Sidebar.module.scss';
 
-const Link: FC<{
+type LinkProps = {
 	to: string;
 	children: string;
-}> = (props) => {
-	const { to, children } = props;
+};
+
+const Link: FC<LinkProps> = ({ to, children }) => {
 	const location = useLocation();
 
 	const getActiveStyle = (path: string) => {
