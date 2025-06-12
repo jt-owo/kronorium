@@ -1,9 +1,29 @@
 {
     "maps": [
-        "Liberty Falls",
-        "Terminus",
-        "Citadelle Des Morts",
-        "The Tomb",
-        "Shattered Veil"
+        {
+            "name": "Liberty Falls",
+            "restrictions": []
+        },
+        {
+            "name": "Terminus",
+            "restrictions": [
+                {
+                    "name": "No Water",
+                    "description": "You are not allowed to touch water."
+                }
+            ]
+        },
+        {
+            "name": "Citadelle Des Morts",
+            "restrictions": []
+        },
+        {
+            "name": "The Tomb",
+            "restrictions": []
+        },
+        {
+            "name": "Shattered Veil",
+            "restrictions": []
+        }
     ]
 }

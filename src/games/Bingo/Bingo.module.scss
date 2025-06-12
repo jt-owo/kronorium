@@ -11,8 +11,11 @@
     }
 
     label {
-        width: 85%;
         margin: 0 auto;
+
+        input {
+            max-width: 45px;
+        }
     }
 
 	.grid {
@@ -26,8 +29,9 @@
 		user-select: none;
 
 		div {
-			width: 175px;
-			height: 175px;
+            $size: 150px;
+			width: $size;
+			height: $size;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;

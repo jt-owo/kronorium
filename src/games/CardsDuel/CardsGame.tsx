@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FC } from 'react';
-import type { Card, Player } from './types';
+import type { Card, Map, Player, Restriction, Round } from './types';
 
 import mapData from './data/maps.json';
 import resData from './data/baseRestrictions.json';
@@ -12,22 +12,21 @@ import Buttons from '../../components/Layout/Buttons/Buttons';
 import Button from '../../components/Button/Button';
 
 const MAX_LIVES = 3;
-const CARDS_PER_PLAYER = 5;
+const CARDS_PER_PLAYER = 3;
 
 const initialPlayersData: Player[] = [
 	{ id: 'p1', name: 'Player 1', lives: MAX_LIVES, hand: [] },
 	{ id: 'p2', name: 'Player 2', lives: MAX_LIVES, hand: [] }
 ];
 
-type Round = {
-	map: string;
-	restrictions: string[];
-};
-
 type GameState = 'none' | 'pick-cards' | 'round' | 'pick-winner' | 'ending';
 
 const CardsGame: FC = () => {
 	const [cards] = useState<Card[]>(cardData.cards as Card[]);
+	const [maps] = useState<Map[]>(mapData.maps as Map[]);
+	const [restrictions] = useState<Restriction[]>(
+		resData.restrictions as Restriction[]
+	);
 
 	const [round, setRound] = useState<Round | null>(null);
 	const [players, setPlayers] = useState<Player[]>([]);
@@ -53,11 +52,13 @@ const CardsGame: FC = () => {
 	};
 
 	const generateRound = (): Round => {
-		const map =
-			mapData.maps[Math.floor(Math.random() * mapData.maps.length)];
+		const map = maps[Math.floor(Math.random() * maps.length)];
+
+		const combinedRestrictions = [...restrictions, ...map.restrictions];
+
 		const restriction =
-			resData.restrictions[
-				Math.floor(Math.random() * resData.restrictions.length)
+			combinedRestrictions[
+				Math.floor(Math.random() * combinedRestrictions.length)
 			];
 
 		return {
@@ -110,7 +111,7 @@ const CardsGame: FC = () => {
 		setSelectedCard(null);
 		setState('pick-cards');
 		addLog(
-			`🎮 Game started! Map: ${roundInfo.map}, Restriction: ${roundInfo.restrictions[0]}`
+			`🎮 Game started! Map: ${roundInfo.map.name}, Restriction: ${roundInfo.restrictions[0].name}`
 		);
 		addLog(`⏳ Pick phase: Waiting for players to pick a card.`);
 	};
@@ -182,7 +183,9 @@ const CardsGame: FC = () => {
 		setTurn(0);
 		setActivePlayerIndex(resetPlayers.length > 0 ? 0 : -1);
 
-		addLog(`🧟 New round started! Map: ${0}, Restriction: ${0}`);
+		addLog(
+			`🧟 New round started! Map: ${round?.map.name}, Restriction: ${round?.restrictions[0].name}`
+		);
 		addLog(`⏳ Pick phase: Waiting for players to pick a card.`);
 	};
 
@@ -295,8 +298,11 @@ const CardsGame: FC = () => {
 				)}
 				{round && (
 					<>
-						<p>Map: {round.map || 'None'}</p>
-						<p>Restriction(s): {round.restrictions[0] || 'None'}</p>
+						<p>Map: {round.map.name || 'None'}</p>
+						<p>
+							Restriction(s):{' '}
+							{round.restrictions[0].name || 'None'}
+						</p>
 					</>
 				)}
 				{(activePlayerID || state === 'round') && (

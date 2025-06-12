@@ -1,10 +1,12 @@
+@use 'sass:color';
 @use '../../../assets/abstracts/colors';
 
 .sidebar {
-	flex: 20%;
+	flex: 25%;
 	padding: 20px;
 
 	.toc {
+        width: 100%;
 		margin: 0;
 		padding: 0;
 		user-select: none;
@@ -15,10 +17,7 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
-		}
-
-		ol {
-			padding-inline: 2ch;
+            padding-inline: 2ch;
 		}
 
 		li {
@@ -38,13 +37,16 @@
 
 				&:hover,
 				&:focus {
-					background-color: rgba(255, 106, 0, 0.15);
+					background-color: color.change(
+						colors.$orange,
+						$alpha: 0.15
+					);
 					border-left-color: colors.$orange;
 					outline: none;
 				}
 
 				&.active {
-					background-color: rgba(255, 106, 0, 0.3);
+					background-color: color.change(colors.$orange, $alpha: 0.3);
 					border-left-color: colors.$orange;
 				}
 			}

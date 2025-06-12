@@ -1,8 +1,20 @@
 {
     "restrictions": [
-        "SMG Only",
-        "No Double Tap",
-        "No Pack-a-Punch",
-        "No Perks"
+        {
+            "name": "SMG Only",
+            "description": "You have to use SMGs."
+        },
+        {
+            "name": "No Double Tap",
+            "description": "You are not allowed to buy Double Tap."
+        },
+        {
+            "name": "No Pack-a-Punch",
+            "description": "You are not allowed to Pack-a-Punch."
+        },
+        {
+            "name": "No Perks",
+            "description": "You are not allowed to buy any perks."
+        }
     ]
 }

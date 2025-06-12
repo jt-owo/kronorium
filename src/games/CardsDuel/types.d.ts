@@ -12,3 +12,21 @@ export interface Player {
     hand: Card[];
     incoming?: Card[];
 }
+
+export interface Restriction {
+    name: string;
+    description: string;
+};
+
+export interface Round {
+    map: {
+        name: string;
+        restrictions: Restriction[];
+    };
+    restrictions: Restriction[];
+};
+
+export interface Map {
+    name: string;
+    restrictions: Restriction[];
+}

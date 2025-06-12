@@ -9,13 +9,13 @@ import entries from './mwz_bingo.json';
 
 import styles from './Bingo.module.scss';
 
-type BingoCard = {
+type BingoCell = {
 	challenge: string;
 	checked: boolean;
 };
 
 const Bingo: FC = () => {
-	const [cards, setCards] = useState<BingoCard[]>([]);
+	const [cells, setCells] = useState<BingoCell[]>([]);
 
 	const generate = () => {
 		const copy: string[] = [];
@@ -23,7 +23,7 @@ const Bingo: FC = () => {
 			copy.push(...list);
 		});
 
-		const cardList: BingoCard[] = [];
+		const cardList: BingoCell[] = [];
 		for (let i = 0; i < Math.pow(5, 2); i++) {
 			const item = copy[Math.floor(Math.random() * copy.length)];
 			const index = copy.indexOf(item);
@@ -34,16 +34,15 @@ const Bingo: FC = () => {
 			});
 		}
 
-		setCards(cardList);
+		setCells(cardList);
 	};
 
 	const check = (index: number) => {
-		const copy = [...cards];
-		copy[index].checked = !copy[index].checked;
-		setCards(copy);
+		cells[index].checked = !cells[index].checked;
+		setCells([...cells]);
 	};
 
-	if (cards.length < 1) generate();
+	if (cells.length < 1) generate();
 
 	return (
 		<Container id={styles['bingo']} flex>
@@ -52,12 +51,11 @@ const Bingo: FC = () => {
 				<Button onClick={generate}>Generate</Button>
 			</Buttons>
 			<label>
-				Points:
-				<TextBox value={cards.filter((x) => x.checked).length} />
+				<TextBox value={cells.filter((x) => x.checked).length} disabled />
 			</label>
 			<div className={styles['grid']}>
-				{cards &&
-					cards.map((c, i) => {
+				{cells &&
+					cells.map((c, i) => {
 						return (
 							<div
 								key={i}

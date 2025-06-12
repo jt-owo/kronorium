@@ -10,7 +10,7 @@ const Card: React.FC<{ card: CardType; disabled?: boolean }> = ({
 	return (
 		<div
 			className={`${styles.card} ${styles[card.type]} ${
-				disabled ? styles.disabled : ''
+				disabled ? styles['disabled'] : ''
 			}`}>
 			<h3>{card.title}</h3>
 			<p>{card.description}</p>
