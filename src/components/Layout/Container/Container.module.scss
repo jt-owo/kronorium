@@ -1,4 +1,15 @@
-.container.flex {
-	display: flex;
-	flex-flow: column;
+.container {
+	&.flex {
+		display: flex;
+		flex-flow: column;
+		flex-wrap: nowrap;
+	}
+
+	&.row {
+		flex-direction: row;
+	}
+
+	&.grow {
+		flex-grow: 1;
+	}
 }

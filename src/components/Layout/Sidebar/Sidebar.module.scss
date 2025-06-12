@@ -1,52 +1,54 @@
-@use '../../../assets/styles/colors';
+@use 'sass:color';
+@use '../../../assets/abstracts/colors';
 
 .sidebar {
-	flex: 20%;
+	flex: 25%;
 	padding: 20px;
-}
 
-.toc {
-	margin: 0;
-	padding: 0;
-	user-select: none;
-	-moz-user-select: none;
-
-	&,
-	ol {
-		list-style: none;
+	.toc {
+        width: 100%;
 		margin: 0;
 		padding: 0;
-	}
+		user-select: none;
+		-moz-user-select: none;
 
-	ol {
-		padding-inline: 2ch;
-	}
+		&,
+		ol {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+            padding-inline: 2ch;
+		}
 
-	li {
-		margin-bottom: 4px;
+		li {
+			margin-bottom: 5px;
 
-		a {
-			display: block;
-			padding: 8px 12px;
-			color: colors.$orange;
-			letter-spacing: 0.1em;
-			font-weight: 700;
-			text-decoration: none;
-			text-transform: uppercase;
-			border-left: 4px solid transparent;
-			transition: background-color 0.3s ease, border-color 0.3s ease,
-				box-shadow 0.3s ease;
+			a {
+				display: block;
+				color: colors.$white;
+				padding: 8px 12px;
+				letter-spacing: 0.1em;
+				font-weight: 700;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-left: 4px solid transparent;
+				transition: background-color 0.3s ease, border-color 0.3s ease,
+					box-shadow 0.3s ease;
 
-			&:hover,
-			&:focus {
-				background-color: rgba(255, 106, 0, 0.15);
-				border-left-color: colors.$orange;
-				outline: none;
-			}
+				&:hover,
+				&:focus {
+					background-color: color.change(
+						colors.$orange,
+						$alpha: 0.15
+					);
+					border-left-color: colors.$orange;
+					outline: none;
+				}
 
-			&.active {
-				background-color: rgba(255, 106, 0, 0.3);
-				border-left-color: colors.$orange;
+				&.active {
+					background-color: color.change(colors.$orange, $alpha: 0.3);
+					border-left-color: colors.$orange;
+				}
 			}
 		}
 	}

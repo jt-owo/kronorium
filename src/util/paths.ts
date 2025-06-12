@@ -15,5 +15,7 @@ export const Path = {
     MWZ_LOOT: '/mwz#guaranteedloot',
     MWZ_SCHEMATICS: '/mwz#schematics',
     MWZ_GRAVEYARD: '/mwz#graveyard',
-    MWZ_BINGO: '/mwz/bingo'
+    MWZ_BINGO: '/mwz/bingo',
+
+    CARDS_DUEL: '/cards'
 } as const;

@@ -1,7 +1,7 @@
 import { useEffect, useState, type FC } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import styles from './ScrollTop.module.scss';
-import { useLocation } from 'react-router-dom';
 
 type ScrollTopProps = {
 	scrollTop: () => void;

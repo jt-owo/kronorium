@@ -7,9 +7,7 @@ type GuideProps = {
 	desc?: string;
 };
 
-const Guide: FC<GuideProps> = (props) => {
-	const { id, title, desc, children } = props;
-
+const Guide: FC<GuideProps> = ({ id, title, desc, children }) => {
 	return (
 		<div>
 			<h2 id={id}>{title}</h2>

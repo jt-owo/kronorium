@@ -6,7 +6,7 @@ import View from '../../components/Layout/View/View';
 import Guide from '../../components/Layout/View/Guide/Guide';
 
 import MapLink from './MapLink/MapLink';
-import SchematicIcon from '../../components/Schematic/Schematic';
+import SchematicIcon from '../../components/Icons/Schematic/Schematic';
 
 import styles from './MWZ.module.scss';
 

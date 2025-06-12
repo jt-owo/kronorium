@@ -1,5 +1,31 @@
+@use '../../../assets/abstracts/colors';
+
 #augments {
-	th {
-		text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1rem 0;
+
+	th,
+	td {
+		border: 1px solid #444;
+		padding: 12px;
+		text-align: left;
+		position: relative;
+	}
+
+	tr {
+		cursor: pointer;
+
+		&.expanded-row {
+			display: none;
+
+			&.expanded {
+				display: table-row;
+			}
+
+			.expanded-content div {
+				padding: 0 12px;
+			}
+		}
 	}
 }

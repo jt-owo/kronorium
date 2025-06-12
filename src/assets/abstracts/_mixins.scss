@@ -1,0 +1,7 @@
+@use './colors';
+
+@mixin container {
+    background: colors.$bg-1;
+	border: 1px solid colors.$light-gray;
+	border-radius: 8px;
+}

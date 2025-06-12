@@ -1,3 +1,5 @@
+@use '../../../assets/abstracts/colors';
+
 .augment {
 	$size: 64px;
 	height: $size;
@@ -6,6 +8,11 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin: auto;
+    padding: 35px;
+
+    &.selected {
+        border: 2px solid colors.$orange;
+    }
 
 	/* STAMIN-UP */
 	&.hard-target {
@@ -112,7 +119,7 @@
 		background-image: url(https://static.wikia.nocookie.net/callofduty/images/8/85/SpeedyRoulette_Augment_Minor_Icon_BO6.png);
 	}
 
-	&.quick--swap {
+	&.quick-swap {
 		background-image: url(https://static.wikia.nocookie.net/callofduty/images/0/00/QuickSwap_Augment_Minor_Icon_BO6.png);
 	}
 

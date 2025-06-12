@@ -1,0 +1,64 @@
+{
+    "cards": [
+        {
+            "title": "No Juggernog",
+            "description": "You cannot buy Juggernog this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Speed Cola",
+            "description": "You cannot buy Speed Cola this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Quick Revive",
+            "description": "You cannot buy Quick Revive this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Stamin-Up",
+            "description": "You cannot buy Stamin-Up this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No PhD Flopper",
+            "description": "You cannot buy PhD Flopper this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Deadshot Daiquiri",
+            "description": "You cannot buy Deadshot Daiquiri this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Elemental Pop",
+            "description": "You cannot buy Elemental Pop this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Vulture Aid",
+            "description": "You cannot buy Vulture Aid this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "No Double Tap",
+            "description": "You cannot buy Double Tap this round.",
+            "type": "offensive"
+        },
+        {
+            "title": "Melee Only",
+            "description": "You must only use Melee Weapons.",
+            "type": "offensive"
+        },
+        {
+            "title": "Sniper Only",
+            "description": "You must only use Sniper.",
+            "type": "offensive"
+        },
+        {
+            "title": "One Handed",
+            "description": "You must only use one hand to control your character.",
+            "type": "offensive"
+        }
+    ]
+}

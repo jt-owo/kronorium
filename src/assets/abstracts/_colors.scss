@@ -1,0 +1,16 @@
+@use 'sass:color';
+
+$orange: #ff6a00ff;
+$text: color.adjust($orange, $hue: 8, $lightness: 20%);
+$font-light: #ffffffff;
+$font-dark: #1e1e1eff;
+
+$text-header: $orange;
+$shadow: 0 0 6px color.adjust($orange, $hue: 8, $lightness: -15%);
+$light-gray: #282828ff;
+$dark-gray: #1a1a1aff;
+$white: #eeeeeeff;
+
+$font-family: 'Share Tech Mono', monospace;
+
+$bg-1: linear-gradient(145deg, #1b1b1b, #111);

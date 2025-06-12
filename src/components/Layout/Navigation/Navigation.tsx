@@ -24,9 +24,18 @@ const Navigation: FC = () => {
 					<NavLink
 						to={Path.MWZ_BINGO}
 						className={`${styles.last} ${getActiveStyle(
-							'/about'
+							'/bingo'
 						)}`}>
 						Bingo
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						to={Path.CARDS_DUEL}
+						className={`${styles.last} ${getActiveStyle(
+							Path.CARDS_DUEL
+						)}`}>
+						Cards Duel
 					</NavLink>
 				</li>
 			</ul>

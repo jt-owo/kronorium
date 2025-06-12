@@ -1,19 +1,21 @@
 import { useState, type FC } from 'react';
+import Container from '../../components/Layout/Container/Container';
+import Buttons from '../../components/Layout/Buttons/Buttons';
 
-import View from '../../../components/Layout/View/View';
+import Button from '../../components/Button/Button';
+import TextBox from '../../components/TextBox/TextBox';
 
 import entries from './mwz_bingo.json';
 
 import styles from './Bingo.module.scss';
 
-type BingoCard = {
+type BingoCell = {
 	challenge: string;
 	checked: boolean;
 };
 
 const Bingo: FC = () => {
-	const [cards, setCards] = useState<BingoCard[]>([]);
-	const [checked, setChecked] = useState(0);
+	const [cells, setCells] = useState<BingoCell[]>([]);
 
 	const generate = () => {
 		const copy: string[] = [];
@@ -21,7 +23,7 @@ const Bingo: FC = () => {
 			copy.push(...list);
 		});
 
-		const cardList: BingoCard[] = [];
+		const cardList: BingoCell[] = [];
 		for (let i = 0; i < Math.pow(5, 2); i++) {
 			const item = copy[Math.floor(Math.random() * copy.length)];
 			const index = copy.indexOf(item);
@@ -32,36 +34,31 @@ const Bingo: FC = () => {
 			});
 		}
 
-		setCards(cardList);
+		setCells(cardList);
 	};
 
 	const check = (index: number) => {
-		const copy = [...cards];
-		copy[index].checked = !copy[index].checked;
-		setCards(copy);
-
-		const count = cards.filter((x) => x.checked);
-		setChecked(count.length);
+		cells[index].checked = !cells[index].checked;
+		setCells([...cells]);
 	};
 
-	if (cards.length < 1) generate();
+	if (cells.length < 1) generate();
 
 	return (
-		<View title="Modern Warfare Zombies Bingo">
-			<h3>Prototype</h3>
-			<p>
-				<button onClick={() => generate()}>Generate</button>
-			</p>
+		<Container id={styles['bingo']} flex>
+			<h2>Modern Warfare Zombies Bingo</h2>
+			<Buttons align="center">
+				<Button onClick={generate}>Generate</Button>
+			</Buttons>
 			<label>
-				Points:
-				<div className="result">{checked}</div>
+				<TextBox value={cells.filter((x) => x.checked).length} disabled />
 			</label>
 			<div className={styles['grid']}>
-				{cards &&
-					cards.map((c, i) => {
+				{cells &&
+					cells.map((c, i) => {
 						return (
 							<div
-								key={`card${i}`}
+								key={i}
 								className={c.checked ? styles['checked'] : ''}
 								onClick={() => check(i)}>
 								<span>{c.challenge}</span>
@@ -69,7 +66,7 @@ const Bingo: FC = () => {
 						);
 					})}
 			</div>
-		</View>
+		</Container>
 	);
 };
 

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { Perk } from '../../util/enum';
+import type { Perk } from '../../../util/enum';
 
 import styles from './PerkIcon.module.scss';
 
